@@ -116,7 +116,7 @@ export default function CateringInquiry({
         <div className="lg:col-span-5 space-y-4">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-charcoal border border-white/10">
             <ChefHat className="w-3.5 h-3.5 text-terracotta" />
-            <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold font-bold">Private Communes</span>
+            <span className="font-mono text-xs font-semibold tracking-wider tracking-[0.25em] uppercase text-gold font-bold">Private Communes</span>
           </div>
           <h2 className="font-serif text-3xl lg:text-4xl text-white font-medium tracking-tight">
             Curate An Exclusive Dynamic Experience
@@ -128,7 +128,7 @@ export default function CateringInquiry({
 
           <div className="space-y-3 pt-4">
             <div className="flex gap-3 text-xs">
-              <div className="w-5 h-5 rounded-full bg-stone-900 border border-gold/40 flex items-center justify-center font-mono text-[10px] text-gold font-bold flex-shrink-0">
+              <div className="w-5 h-5 rounded-full bg-stone-900 border border-gold/40 flex items-center justify-center font-mono text-xs font-semibold tracking-wider text-gold font-bold flex-shrink-0">
                 1
               </div>
               <p className="text-stone-300">
@@ -136,7 +136,7 @@ export default function CateringInquiry({
               </p>
             </div>
             <div className="flex gap-3 text-xs">
-              <div className="w-5 h-5 rounded-full bg-stone-900 border border-gold/40 flex items-center justify-center font-mono text-[10px] text-gold font-bold flex-shrink-0">
+              <div className="w-5 h-5 rounded-full bg-stone-900 border border-gold/40 flex items-center justify-center font-mono text-xs font-semibold tracking-wider text-gold font-bold flex-shrink-0">
                 2
               </div>
               <p className="text-stone-300">
@@ -167,7 +167,7 @@ export default function CateringInquiry({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name */}
                   <div className="space-y-1">
-                    <label htmlFor="inquiry_name" className="text-[10px] font-mono uppercase text-stone-400">Full Name</label>
+                    <label htmlFor="inquiry_name" className="text-sm font-semibold tracking-wider font-mono uppercase text-stone-400">Full Name</label>
                     <input
                       id="inquiry_name"
                       type="text"
@@ -181,7 +181,7 @@ export default function CateringInquiry({
 
                   {/* Email */}
                   <div className="space-y-1">
-                    <label htmlFor="inquiry_email" className="text-[10px] font-mono uppercase text-stone-400">Email Address</label>
+                    <label htmlFor="inquiry_email" className="text-sm font-semibold tracking-wider font-mono uppercase text-stone-400">Email Address</label>
                     <input
                       id="inquiry_email"
                       type="email"
@@ -197,7 +197,7 @@ export default function CateringInquiry({
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {/* Phone */}
                   <div className="space-y-1">
-                    <label htmlFor="inquiry_phone" className="text-[10px] font-mono uppercase text-stone-400">Phone</label>
+                    <label htmlFor="inquiry_phone" className="text-sm font-semibold tracking-wider font-mono uppercase text-stone-400">Phone</label>
                     <input
                       id="inquiry_phone"
                       type="tel"
@@ -211,7 +211,7 @@ export default function CateringInquiry({
 
                   {/* Event Date */}
                   <div className="space-y-1">
-                    <label htmlFor="inquiry_date" className="text-[10px] font-mono uppercase text-stone-400">Preferred Date</label>
+                    <label htmlFor="inquiry_date" className="text-sm font-semibold tracking-wider font-mono uppercase text-stone-400">Preferred Date</label>
                     <input
                       id="inquiry_date"
                       type="date"
@@ -224,7 +224,7 @@ export default function CateringInquiry({
 
                   {/* Group Size */}
                   <div className="space-y-1">
-                    <label htmlFor="inquiry_group" className="text-[10px] font-mono uppercase text-stone-400">Target Group Size</label>
+                    <label htmlFor="inquiry_group" className="text-sm font-semibold tracking-wider font-mono uppercase text-stone-400">Target Group Size</label>
                     <input
                       id="inquiry_group"
                       type="number"
@@ -241,7 +241,7 @@ export default function CateringInquiry({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Target Neighborhood */}
                   <div className="space-y-1">
-                    <label htmlFor="inquiry_neighborhood" className="text-[10px] font-mono uppercase text-stone-400">South LA Neighborhood Focus</label>
+                    <label htmlFor="inquiry_neighborhood" className="text-sm font-semibold tracking-wider font-mono uppercase text-stone-400">South LA Neighborhood Focus</label>
                     <select
                       id="inquiry_neighborhood"
                       value={formData.neighborhood}
@@ -258,7 +258,7 @@ export default function CateringInquiry({
 
                   {/* Scope scheme */}
                   <div className="space-y-1">
-                    <label htmlFor="inquiry_scope" className="text-[10px] font-mono uppercase text-stone-400">Inquiry Scope Scheme</label>
+                    <label htmlFor="inquiry_scope" className="text-sm font-semibold tracking-wider font-mono uppercase text-stone-400">Inquiry Scope Scheme</label>
                     <select
                       id="inquiry_scope"
                       value={formData.cateringScope}
@@ -274,7 +274,7 @@ export default function CateringInquiry({
 
                 {/* notes */}
                 <div className="space-y-1">
-                  <label htmlFor="inquiry_notes" className="text-[10px] font-mono uppercase text-stone-400">Special Alchemy Requests (Optional)</label>
+                  <label htmlFor="inquiry_notes" className="text-sm font-semibold tracking-wider font-mono uppercase text-stone-400">Special Alchemy Requests (Optional)</label>
                   <textarea
                     id="inquiry_notes"
                     value={formData.notes}
@@ -287,7 +287,7 @@ export default function CateringInquiry({
                 <button
                   type="submit"
                   disabled={isSending}
-                  className="w-full py-3 cursor-pointer bg-terracotta hover:bg-terracotta-hover text-white font-mono text-xs uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-terracotta/10"
+                  className="w-full py-3 cursor-pointer bg-terracotta hover:bg-terracotta-hover text-white font-mono text-base font-semibold min-h-[44px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-terracotta/10"
                 >
                   {isSending ? (
                     <>
@@ -356,7 +356,7 @@ export default function CateringInquiry({
               <div className="pt-4 border-t border-white/5 space-y-4">
                 <div className="p-3 bg-stone-900 border border-gold/20 rounded-lg flex items-center gap-3">
                   <ShieldCheck className="w-5 h-5 text-gold flex-shrink-0" />
-                  <p className="text-[10px] text-stone-300 font-sans leading-normal">
+                  <p className="text-xs font-semibold tracking-wider text-stone-300 font-sans leading-normal">
                     <strong className="text-white block font-medium">Back-Office Dynamic capture demonstration</strong>
                     Any catering submission dispatched inside this template is cached in your client browser's memory. This panel lets you audition how capturing premium client lists works out-of-the-box.
                   </p>
@@ -367,7 +367,7 @@ export default function CateringInquiry({
                     {inquiries.map((inq) => (
                       <div 
                         key={inq.id} 
-                        className="bg-stone-950 rounded-lg p-3 border border-white/5 flex items-start justify-between gap-4 font-mono text-[10px]"
+                        className="bg-stone-950 rounded-lg p-3 border border-white/5 flex items-start justify-between gap-4 font-mono text-xs font-semibold tracking-wider"
                       >
                         <div className="space-y-1 min-w-0">
                           <div className="flex items-center gap-2">
@@ -386,7 +386,7 @@ export default function CateringInquiry({
                             <div>Date Focus: <span className="text-white">{inq.eventDate}</span> | Size: <span className="text-white">{inq.groupSize} Boarders</span></div>
                             <div>Scope: <span className="text-terracotta font-semibold">{inq.cateringScope}</span></div>
                             {inq.customRequestNotes && (
-                              <div className="text-gray-500 italic mt-1 bg-stone-900/60 p-1.5 rounded border border-white/5">
+                              <div className="text-gray-300 italic mt-1 bg-stone-900/60 p-1.5 rounded border border-white/5">
                                 "{inq.customRequestNotes}"
                               </div>
                             )}
@@ -406,7 +406,7 @@ export default function CateringInquiry({
                   </div>
                 ) : (
                   <div className="text-center py-6 bg-stone-950/60 border border-dashed border-white/5 rounded-lg">
-                    <p className="text-[10px] text-stone-500 font-mono">No lead profiles captured yet. Submit the catering request above to view.</p>
+                    <p className="text-xs font-semibold tracking-wider text-stone-500 font-mono">No lead profiles captured yet. Submit the catering request above to view.</p>
                   </div>
                 )}
               </div>

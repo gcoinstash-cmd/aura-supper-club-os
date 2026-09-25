@@ -149,7 +149,7 @@ export default function App() {
         </button>
 
         {/* Minimal Navigation System (Desktop) */}
-        <nav className="hidden lg:flex items-center gap-7 text-[11px] font-mono tracking-widest uppercase">
+        <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold font-mono tracking-widest uppercase">
           <button 
             onClick={() => scrollToSection(heroRef, 'home')}
             className={`transition-colors cursor-pointer ${activeTab === 'home' ? 'text-gold font-bold' : 'text-stone-400 hover:text-white'}`}
@@ -186,7 +186,7 @@ export default function App() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setIsAdminModalOpen(true)}
-            className="px-3 py-1.5 cursor-pointer bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-mono uppercase font-bold tracking-widest rounded-lg transition-colors flex items-center gap-1.5 shadow-sm"
+            className="px-3 py-1.5 cursor-pointer bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold tracking-wider font-mono uppercase font-bold tracking-widest rounded-lg transition-colors flex items-center gap-1.5 shadow-sm"
             title="Open Tasting Room Control (Cheat Code: supperclub2026)"
           >
             <Lock className="w-3 h-3 text-amber-400" />
@@ -203,7 +203,7 @@ export default function App() {
           </a>
           <button
             onClick={() => scrollToSection(ticketsRef, 'seating')}
-            className="px-4 py-2 cursor-pointer bg-gold hover:bg-gold-hover text-obsidian text-[10px] font-mono uppercase font-bold tracking-widest rounded-lg transition-colors shadow shadow-gold/5"
+            className="px-4 py-2 cursor-pointer bg-gold hover:bg-gold-hover text-obsidian text-xs font-semibold tracking-wider font-mono uppercase font-bold tracking-widest rounded-lg transition-colors shadow shadow-gold/5"
             aria-label="Secure a chair in upcoming dinner"
           >
             Secure Chair
@@ -252,7 +252,7 @@ export default function App() {
                   We partner directly with historical Black farming cooperatives across the Carolinas and Georgia to source organic, non-GMO stone-ground grain mill bases, small-batch cane syrups, and wild heirloom okra. Every plate honors cooking methodologies honed by Southern ancestors, updated for the contemporary West Coast palate.
                 </p>
                 <div className="pt-2">
-                  <span className="text-[10px] font-mono text-gold flex items-center gap-1 group-hover:text-white transition-colors">
+                  <span className="text-xs font-semibold tracking-wider font-mono text-gold flex items-center gap-1 group-hover:text-white transition-colors">
                     <span>100% Traceable Farming Linkage</span>
                     <ChevronRight className="w-3 h-3" />
                   </span>
@@ -300,7 +300,7 @@ export default function App() {
                 <p className="text-xs text-stone-400 font-sans leading-relaxed">
                   Aura chairs are aligned facing a single custom-built communal live-edge redwood table. Twenty strangers gather under California twilight, and design a modern network as slow-cooked pots simmer right behind them. To protect our guest's presence, handheld mobile photography is restricted around the board.
                 </p>
-                <div className="flex items-center gap-2 text-[10px] font-mono text-terracotta uppercase">
+                <div className="flex items-center gap-2 text-xs font-semibold tracking-wider font-mono text-terracotta uppercase">
                   <Lock className="w-3.5 h-3.5" />
                   <span>Unplugged communal engagement enforced</span>
                 </div>
@@ -370,7 +370,7 @@ export default function App() {
               {myBookings.map((tkt) => (
                 <div 
                   key={tkt.id} 
-                  className="bg-stone-950/60 border border-gold/40 rounded-xl p-6 relative overflow-hidden flex flex-col justify-between font-mono text-[11px] text-stone-300"
+                  className="bg-stone-950/60 border border-gold/40 rounded-xl p-6 relative overflow-hidden flex flex-col justify-between font-mono text-xs font-semibold text-stone-300"
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gold/5 rounded-full blur-2xl pointer-events-none" />
 
@@ -389,7 +389,7 @@ export default function App() {
                     <div>
                       <span className="text-stone-500 text-[9px] uppercase block">Reserved Chemical Options</span>
                       <span className="text-stone-300">Spice: {tkt.customSpiceTier}</span>
-                      {tkt.dietaryNotes && <span className="text-stone-400 block text-[10px] truncate">Notes: "{tkt.dietaryNotes}"</span>}
+                      {tkt.dietaryNotes && <span className="text-stone-400 block text-xs font-semibold tracking-wider truncate">Notes: "{tkt.dietaryNotes}"</span>}
                     </div>
                   </div>
 
@@ -434,7 +434,7 @@ export default function App() {
 
           {/* Quick links columns (4 cols) */}
           <div className="md:col-span-4 text-left space-y-3 font-mono text-xs">
-            <div className="text-[10px] uppercase text-stone-500 tracking-wider">Aura Coordinates</div>
+            <div className="text-xs font-semibold tracking-wider uppercase text-stone-500 tracking-wider">Aura Coordinates</div>
             <div className="space-y-1.5 text-stone-400">
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-terracotta" />
@@ -453,7 +453,7 @@ export default function App() {
 
           {/* Social Links & Trust (3 cols) */}
           <div className="md:col-span-3 text-left space-y-4">
-            <div className="text-[10px] font-mono uppercase text-stone-500 tracking-wider">System Authenticator</div>
+            <div className="text-xs font-semibold tracking-wider font-mono uppercase text-stone-500 tracking-wider">System Authenticator</div>
             <div className="p-3 bg-stone-950 border border-white/5 rounded-lg space-y-2">
               <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-widest text-gold">
                 <Lock className="w-3.5 h-3.5" />

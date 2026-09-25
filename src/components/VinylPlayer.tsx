@@ -67,7 +67,7 @@ export default function VinylPlayer({ activeTrackId, onTrackChange }: VinylPlaye
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">
           <div className="w-2.5 h-2.5 rounded-full bg-terracotta animate-pulse" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta font-semibold">Live Sound Curation</span>
+          <span className="font-mono text-xs font-semibold tracking-wider uppercase tracking-[0.2em] text-terracotta font-semibold">Live Sound Curation</span>
         </div>
         <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-stone-900 border border-white/5">
           <Music className="w-3 h-3 text-gold" />
@@ -81,7 +81,7 @@ export default function VinylPlayer({ activeTrackId, onTrackChange }: VinylPlaye
         {/* Playback controls & Metadata block (Left 5 cols) */}
         <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
           <div>
-            <span className="text-[10px] font-mono tracking-widest text-gold uppercase block mb-1">Night Program</span>
+            <span className="text-xs font-semibold tracking-wider font-mono tracking-widest text-gold uppercase block mb-1">Night Program</span>
             
             <AnimatePresence mode="wait">
               <motion.div
@@ -101,7 +101,7 @@ export default function VinylPlayer({ activeTrackId, onTrackChange }: VinylPlaye
                   <span className="font-mono text-xs px-2.5 py-0.5 rounded-full bg-stone-900 border border-white/5 text-stone-400">
                     {currentTrack.releaseYear}
                   </span>
-                  <span className="font-mono text-[10px] font-medium tracking-wide text-terracotta uppercase">
+                  <span className="font-mono text-xs font-semibold tracking-wider font-medium tracking-wide text-terracotta uppercase">
                     {currentTrack.moodTag}
                   </span>
                 </div>
@@ -111,10 +111,10 @@ export default function VinylPlayer({ activeTrackId, onTrackChange }: VinylPlaye
 
           {/* Vibes Sublist */}
           <div className="border-t border-white/5 pt-4">
-            <div className="text-[10px] font-mono uppercase tracking-[0.15em] text-stone-400 mb-2">Aura Flavor Profiles</div>
+            <div className="text-xs font-semibold tracking-wider font-mono uppercase tracking-[0.15em] text-stone-400 mb-2">Aura Flavor Profiles</div>
             <div className="flex flex-wrap gap-1.5">
               {currentTrack.vibes.map((v, i) => (
-                <span key={i} className="text-[10px] text-stone-300 bg-stone-900/40 px-2 py-1 rounded border border-white/5">
+                <span key={i} className="text-xs font-semibold tracking-wider text-stone-300 bg-stone-900/40 px-2 py-1 rounded border border-white/5">
                   #{v}
                 </span>
               ))}
@@ -271,7 +271,7 @@ export default function VinylPlayer({ activeTrackId, onTrackChange }: VinylPlaye
 
       {/* Program Tracks Direct Selector */}
       <div className="mt-8 border-t border-white/10 pt-4">
-        <h4 className="font-mono text-[10px] uppercase text-stone-500 tracking-[0.15em] mb-3 flex items-center gap-1">
+        <h4 className="font-mono text-xs font-semibold tracking-wider uppercase text-stone-500 tracking-[0.15em] mb-3 flex items-center gap-1">
           <Sparkles className="w-3.5 h-3.5 text-gold" />
           <span>Audition Curated Plates & Playlist Sync</span>
         </h4>
@@ -306,7 +306,7 @@ export default function VinylPlayer({ activeTrackId, onTrackChange }: VinylPlaye
                   <div className={`font-medium truncate ${isSelected ? 'text-gold' : 'text-gray-200'}`}>
                     {track.title}
                   </div>
-                  <div className="text-gray-400 text-[10px] truncate">{track.artist}</div>
+                  <div className="text-gray-400 text-xs font-semibold tracking-wider truncate">{track.artist}</div>
                 </div>
               </button>
             );

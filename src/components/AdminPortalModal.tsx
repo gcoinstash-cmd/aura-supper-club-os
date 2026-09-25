@@ -173,7 +173,7 @@ export default function AdminPortalModal({
                       <h4 className="text-3xl font-mono text-white font-bold">
                         ${totalRevenue.toLocaleString()}
                       </h4>
-                      <span className="text-[11px] font-mono text-emerald-400 mt-2 block">
+                      <span className="text-xs font-semibold font-mono text-emerald-400 mt-2 block">
                         Verified pre-paid seating
                       </span>
                     </div>
@@ -185,7 +185,7 @@ export default function AdminPortalModal({
                       <h4 className="text-3xl font-mono text-white font-bold">
                         {totalSeatsBooked} Guests
                       </h4>
-                      <span className="text-[11px] font-mono text-gold mt-2 block">
+                      <span className="text-xs font-semibold font-mono text-gold mt-2 block">
                         Across View Park & Baldwin Hills
                       </span>
                     </div>
@@ -197,7 +197,7 @@ export default function AdminPortalModal({
                       <h4 className="text-3xl font-mono text-white font-bold">
                         {inquiries.length} Inquiries
                       </h4>
-                      <span className="text-[11px] font-mono text-terracotta mt-2 block">
+                      <span className="text-xs font-semibold font-mono text-terracotta mt-2 block">
                         Private kitchen takeover queue
                       </span>
                     </div>
@@ -241,14 +241,14 @@ export default function AdminPortalModal({
                                 <span className="text-stone-500">•</span>
                                 <span className="text-gold font-semibold">{b.id}</span>
                                 <span className="text-stone-500">•</span>
-                                <span className="px-2 py-0.5 bg-stone-900 border border-white/10 rounded text-[10px] text-terracotta">
+                                <span className="px-2 py-0.5 bg-stone-900 border border-white/10 rounded text-xs font-semibold tracking-wider text-terracotta">
                                   {b.guestCount} Chairs
                                 </span>
                               </div>
                               <p className="text-stone-400 text-xs font-sans">
                                 {evt ? evt.title : 'Supper Club Dinner'} | {b.seatingPreference} | Spice: {b.customSpiceTier}
                               </p>
-                              <div className="text-[11px] text-stone-500 flex items-center gap-3">
+                              <div className="text-xs font-semibold text-stone-500 flex items-center gap-3">
                                 <span>{b.customerEmail}</span>
                                 <span>{b.customerPhone}</span>
                                 {b.curationAddon && <span className="text-gold font-semibold">+ Vinyl Addon</span>}
@@ -303,7 +303,7 @@ export default function AdminPortalModal({
                             <p className="text-stone-300 text-xs font-sans">
                               Target Date: <strong className="text-white">{inq.eventDate}</strong> | Party Size: <strong className="text-white">{inq.groupSize} Guests</strong> | Scope: <span className="text-gold">{inq.cateringScope}</span>
                             </p>
-                            <div className="text-[11px] text-stone-500 flex items-center gap-3">
+                            <div className="text-xs font-semibold text-stone-500 flex items-center gap-3">
                               <span>{inq.customerEmail}</span>
                               <span>{inq.customerPhone}</span>
                             </div>
@@ -348,7 +348,7 @@ export default function AdminPortalModal({
                       <div key={evt.id} className="p-4 bg-stone-950 border border-white/5 rounded-xl space-y-3">
                         <div className="flex items-center justify-between">
                           <span className="text-xs font-mono text-terracotta uppercase tracking-wider">{evt.neighborhood}</span>
-                          <span className={`px-2 py-0.5 rounded text-[10px] font-mono uppercase font-bold ${
+                          <span className={`px-2 py-0.5 rounded text-xs font-semibold tracking-wider font-mono uppercase font-bold ${
                             evt.status === 'Open' ? 'bg-emerald-950 text-emerald-300 border border-emerald-900' : 'bg-amber-950 text-amber-300 border border-amber-900'
                           }`}>
                             {evt.status}
@@ -365,7 +365,7 @@ export default function AdminPortalModal({
                             style={{ width: `${Math.round(((evt.capacity - evt.ticketsLeft) / evt.capacity) * 100)}%` }}
                           />
                         </div>
-                        <div className="flex justify-between text-[11px] font-mono text-stone-500">
+                        <div className="flex justify-between text-xs font-semibold font-mono text-stone-500">
                           <span>{evt.ticketsLeft} seats open</span>
                           <span>Capacity: {evt.capacity}</span>
                         </div>

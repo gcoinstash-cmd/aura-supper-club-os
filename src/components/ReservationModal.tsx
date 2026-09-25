@@ -134,11 +134,11 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                   
                   {/* Step 1: Attendee Counters */}
                   <div className="space-y-3">
-                    <label className="font-mono text-[10px] text-stone-400 uppercase tracking-wider block">1. Total Board Count</label>
+                    <label className="font-mono text-sm font-semibold tracking-wider text-stone-400 uppercase tracking-wider block">1. Total Board Count</label>
                     <div className="flex items-center justify-between p-4 rounded-xl bg-stone-950/60 border border-white/5">
                       <div>
                         <div className="text-sm font-medium text-white">{formData.guestCount} {formData.guestCount === 1 ? 'Guest Chair' : 'Guest Chairs'}</div>
-                        <div className="text-[10px] text-stone-500">Fully inclusive multi-course menu pairing</div>
+                        <div className="text-xs font-semibold tracking-wider text-stone-500">Fully inclusive multi-course menu pairing</div>
                       </div>
                       <div className="flex items-center gap-4">
                         <button
@@ -162,7 +162,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
 
                   {/* Step 2: Seating Placements */}
                   <div className="space-y-3">
-                    <label className="font-mono text-[10px] text-stone-400 uppercase tracking-wider block">2. Seating Preferences</label>
+                    <label className="font-mono text-sm font-semibold tracking-wider text-stone-400 uppercase tracking-wider block">2. Seating Preferences</label>
                     <div className="grid grid-cols-2 gap-2">
                       {([
                         'Courtyard Firepit',
@@ -200,7 +200,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                     
                     {/* Spiciness Level */}
                     <div className="space-y-2">
-                      <label className="font-mono text-[10px] text-stone-400 uppercase tracking-wider block">3. Board Spice Preference</label>
+                      <label className="font-mono text-sm font-semibold tracking-wider text-stone-400 uppercase tracking-wider block">3. Board Spice Preference</label>
                       <div className="flex flex-col gap-1.5">
                         {([
                           'Traditional Southern Subtle',
@@ -220,7 +220,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                               }`}
                             >
                               <Flame className={`w-3.5 h-3.5 ${isSelected ? 'text-terracotta fill-terracotta' : 'text-stone-500'}`} />
-                              <span className="font-mono text-[10px]">{spice}</span>
+                              <span className="font-mono text-xs font-semibold tracking-wider">{spice}</span>
                             </button>
                           );
                         })}
@@ -229,7 +229,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
 
                     {/* Dietary Restrictions */}
                     <div className="space-y-2">
-                      <label htmlFor="dietary_notes" className="font-mono text-[10px] text-stone-400 uppercase tracking-wider block">4. Dietary Markers</label>
+                      <label htmlFor="dietary_notes" className="font-mono text-sm font-semibold tracking-wider text-stone-400 uppercase tracking-wider block">4. Dietary Markers</label>
                       <textarea
                         id="dietary_notes"
                         value={formData.dietaryNotes}
@@ -245,7 +245,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                     <div className="max-w-[75%]">
                       <span className="font-mono text-[9px] text-gold uppercase tracking-wider block mb-0.5">Heritage Souvenir Soufflé</span>
                       <h4 className="text-xs font-semibold text-white">Curated Vinyl Sync Plate (+$35)</h4>
-                      <p className="text-[10px] text-stone-400 font-sans leading-relaxed">
+                      <p className="text-xs font-semibold tracking-wider text-stone-400 font-sans leading-relaxed">
                         A pristine physical vinyl LP record custom selected by our selectors matching your dinner atmosphere. Gift-wrapped in wax-sealed brown kraft.
                       </p>
                     </div>
@@ -265,7 +265,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
 
                   {/* Step 5: Personal Guest Details */}
                   <div className="space-y-3">
-                    <label className="font-mono text-[10px] text-stone-400 uppercase tracking-wider block">5. Primary Identity Markers</label>
+                    <label className="font-mono text-sm font-semibold tracking-wider text-stone-400 uppercase tracking-wider block">5. Primary Identity Markers</label>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                       <div>
                         <input
@@ -302,7 +302,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
 
                   {/* Step 6: Luxury Card Vaulting (Simulated checkout) */}
                   <div className="space-y-3 border-t border-white/5 pt-4">
-                    <label className="font-mono text-[10px] text-stone-400 uppercase tracking-wider block">6. Premium Secured Verification</label>
+                    <label className="font-mono text-sm font-semibold tracking-wider text-stone-400 uppercase tracking-wider block">6. Premium Secured Verification</label>
                     <div className="grid grid-cols-3 gap-3">
                       <div className="col-span-1.5 relative">
                         <CreditCard className="absolute left-3 top-3 w-4 h-4 text-stone-500" />
@@ -339,7 +339,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                         />
                       </div>
                     </div>
-                    <span className="text-[10px] text-stone-500 font-sans block">
+                    <span className="text-xs font-semibold tracking-wider text-stone-500 font-sans block">
                       Aura operates on a fully-inclusive ticketing format. Cancellation refunds granted up to 72 hours prior to seating.
                     </span>
                   </div>
@@ -350,7 +350,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                 <div className="p-6 bg-stone-950/85 flex flex-col sm:flex-row items-center justify-between gap-6">
                   
                   {/* Detailed ledger */}
-                  <div className="w-full sm:w-auto text-left font-mono text-[10px] text-stone-400 space-y-1">
+                  <div className="w-full sm:w-auto text-left font-mono text-xs font-semibold tracking-wider text-stone-400 space-y-1">
                     <div className="flex justify-between gap-4">
                       <span>Course Pack ({formData.guestCount}):</span>
                       <span className="text-white">${calculateSubtotal()}</span>
@@ -375,7 +375,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto px-6 py-3 cursor-pointer bg-gold hover:bg-gold-hover text-obsidian font-mono text-xs font-extrabold uppercase tracking-widest rounded-xl transition-all shadow-lg shadow-gold/10 flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 py-3 cursor-pointer bg-gold hover:bg-gold-hover text-obsidian font-mono text-base font-semibold min-h-[44px] font-extrabold uppercase tracking-widest rounded-xl transition-all shadow-lg shadow-gold/10 flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
@@ -397,7 +397,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
               <div className="py-6 flex flex-col items-center">
                 
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center gap-1 bg-green-950 border border-green-800 text-green-400 text-[10px] font-mono uppercase px-3 py-1 rounded-full mb-3 shadow">
+                  <div className="inline-flex items-center gap-1 bg-green-950 border border-green-800 text-green-400 text-xs font-semibold tracking-wider font-mono uppercase px-3 py-1 rounded-full mb-3 shadow">
                     <Check className="w-3.5 h-3.5 stroke-[3px]" />
                     <span>Liturgy Of Seating Authorized</span>
                   </div>
@@ -427,34 +427,34 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                   {/* Main Event info */}
                   <div className="space-y-1 text-center">
                     <h5 className="font-serif text-lg text-white font-medium">{event.title}</h5>
-                    <div className="text-[11px] font-sans text-stone-400 italic">"West Coast Air • Southern Alchemy"</div>
+                    <div className="text-xs font-semibold font-sans text-stone-400 italic">"West Coast Air • Southern Alchemy"</div>
                   </div>
 
                   {/* Split Dashboard (Dashed borders representation) */}
                   <div className="border-t border-b border-dashed border-white/10 py-4 grid grid-cols-2 gap-4 text-left font-mono">
                     <div>
                       <span className="text-[8px] text-stone-500 uppercase block">Chair Holder</span>
-                      <span className="text-[11px] text-stone-200 truncate block font-bold">{ticketVoucher.customerName}</span>
+                      <span className="text-xs font-semibold text-stone-200 truncate block font-bold">{ticketVoucher.customerName}</span>
                     </div>
                     <div>
                       <span className="text-[8px] text-stone-500 uppercase block">Board Capacity</span>
-                      <span className="text-[11px] text-white font-bold">{ticketVoucher.guestCount} {ticketVoucher.guestCount === 1 ? 'Seat' : 'Seats'} Authorized</span>
+                      <span className="text-xs font-semibold text-white font-bold">{ticketVoucher.guestCount} {ticketVoucher.guestCount === 1 ? 'Seat' : 'Seats'} Authorized</span>
                     </div>
                     <div>
                       <span className="text-[8px] text-stone-500 uppercase block">Placing preference</span>
-                      <span className="text-[11px] text-gold font-bold">{ticketVoucher.seatingPreference}</span>
+                      <span className="text-xs font-semibold text-gold font-bold">{ticketVoucher.seatingPreference}</span>
                     </div>
                     <div>
                       <span className="text-[8px] text-stone-500 uppercase block">Board Spice Chemistry</span>
-                      <span className="text-[11px] text-terracotta font-bold">{ticketVoucher.customSpiceTier}</span>
+                      <span className="text-xs font-semibold text-terracotta font-bold">{ticketVoucher.customSpiceTier}</span>
                     </div>
                     <div>
                       <span className="text-[8px] text-stone-500 uppercase block">Date Matrix</span>
-                      <span className="text-[11px] text-stone-300">{event.date.split(',')[1]}</span>
+                      <span className="text-xs font-semibold text-stone-300">{event.date.split(',')[1]}</span>
                     </div>
                     <div>
                       <span className="text-[8px] text-stone-500 uppercase block">Hour Window</span>
-                      <span className="text-[11px] text-stone-300">{event.time.split('—')[0]}</span>
+                      <span className="text-xs font-semibold text-stone-300">{event.time.split('—')[0]}</span>
                     </div>
                   </div>
 
@@ -496,7 +496,7 @@ export default function ReservationModal({ event, onClose, onSuccess }: Reservat
                   </button>
                   <button
                     onClick={onClose}
-                    className="px-4 py-2 bg-gold text-obsidian text-xs font-mono font-bold rounded-lg cursor-pointer"
+                    className="px-5 py-3 min-h-[44px] bg-gold text-obsidian text-base font-semibold min-h-[44px] font-mono font-bold rounded-lg cursor-pointer"
                   >
                     Return to Aura
                   </button>

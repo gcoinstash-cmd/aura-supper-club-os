@@ -27,7 +27,7 @@ export default function ProvisionsMenu() {
       <div className="text-center space-y-4">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-charcoal border border-white/10">
           <Utensils className="w-3.5 h-3.5 text-terracotta" />
-          <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold font-bold">The Provisions</span>
+          <span className="font-mono text-xs font-semibold tracking-wider tracking-[0.25em] uppercase text-gold font-bold">The Provisions</span>
         </div>
         <h2 className="font-serif text-4xl lg:text-5xl text-white font-medium tracking-tight">
           Southern Roots, Elegant Progressions
@@ -66,14 +66,14 @@ export default function ProvisionsMenu() {
 
         {/* Dietary Prefs */}
         <div className="flex items-center gap-2">
-          <span className="font-mono text-[10px] text-stone-500 uppercase tracking-wider">Lifestyles:</span>
+          <span className="font-mono text-xs font-semibold tracking-wider text-stone-500 uppercase tracking-wider">Lifestyles:</span>
           <div className="flex gap-1.5">
             <button
               onClick={() => {
                 setDietFilter(null);
                 setExpandedItemId(null);
               }}
-              className={`px-2.5 py-1 text-[10px] font-mono tracking-wide rounded-md border transition-all cursor-pointer ${
+              className={`px-2.5 py-1 text-xs font-semibold tracking-wider font-mono tracking-wide rounded-md border transition-all cursor-pointer ${
                 dietFilter === null
                   ? 'bg-terracotta/25 border-terracotta text-white'
                   : 'bg-stone-900 border-white/5 text-stone-400 hover:text-white'
@@ -90,7 +90,7 @@ export default function ProvisionsMenu() {
                     setDietFilter(isActive ? null : diet);
                     setExpandedItemId(null);
                   }}
-                  className={`px-2.5 py-1 text-[10px] font-mono tracking-wide rounded-md border transition-all cursor-pointer ${
+                  className={`px-2.5 py-1 text-xs font-semibold tracking-wider font-mono tracking-wide rounded-md border transition-all cursor-pointer ${
                     isActive
                       ? 'bg-terracotta/25 border-terracotta text-white'
                       : 'bg-stone-900 border-white/5 text-stone-400 hover:text-white'
@@ -182,12 +182,12 @@ export default function ProvisionsMenu() {
                   <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/5">
                     <button 
                       onClick={() => setExpandedItemId(isExpanded ? null : item.id)}
-                      className="inline-flex items-center gap-1.5 font-mono text-[10px] text-stone-400 hover:text-gold transition-colors focus:outline-none cursor-pointer"
+                      className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold tracking-wider text-stone-400 hover:text-gold transition-colors focus:outline-none cursor-pointer"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>{isExpanded ? 'Conceal Provision Notes' : 'Inspect Ingredients & Alchemy'}</span>
                     </button>
-                    <span className="text-[10px] font-mono text-stone-500">
+                    <span className="text-xs font-semibold tracking-wider font-mono text-stone-500">
                       ID: AURA-{item.id.toUpperCase()}
                     </span>
                   </div>
@@ -211,7 +211,7 @@ export default function ProvisionsMenu() {
                               {item.ingredients.map((ing) => (
                                 <div 
                                   key={ing} 
-                                  className="flex items-center gap-1 bg-stone-950 px-2 py-1 rounded text-[10px] text-gray-300 border border-white/5"
+                                  className="flex items-center gap-1 bg-stone-950 px-2 py-1 rounded text-xs font-semibold tracking-wider text-gray-300 border border-white/5"
                                 >
                                   <Check className="w-3 h-3 text-gold" />
                                   <span>{ing}</span>
@@ -225,7 +225,7 @@ export default function ProvisionsMenu() {
                             <span className="font-mono text-[9px] text-gold uppercase tracking-wider block mb-1">
                               Sommelier Recommended Pairing Sync
                             </span>
-                            <p className="text-[11px] text-stone-400 font-sans italic">
+                            <p className="text-xs font-semibold text-stone-400 font-sans italic">
                               {item.course === 'Small Plates' && 'Uncle Nearest 1884 Small Batch Bourbon Neat or chilled rye elderflower sour.'}
                               {item.course === 'Mains' && 'Cabernet Sauvignon barrel matured with notes of dark smoke and organic black cherry.'}
                               {item.course === 'Final Notes' && 'House-drip dark chicory black cold foam brew, sweetened with peach demarara.'}

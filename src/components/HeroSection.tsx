@@ -50,7 +50,7 @@ export default function HeroSection({
           <div className="min-w-0">
             <span className="font-mono text-[8px] uppercase tracking-wider text-terracotta font-semibold block">Now on the Deck</span>
             <span className="text-xs text-white font-medium truncate block font-serif italic">"{currentlyVinylPlaying}"</span>
-            <span className="text-[10px] text-stone-400 font-sans truncate block">{vinylArtist}</span>
+            <span className="text-xs font-semibold tracking-wider text-stone-400 font-sans truncate block">{vinylArtist}</span>
           </div>
         </div>
 
@@ -59,7 +59,7 @@ export default function HeroSection({
           
           <button
             onClick={onScrollToTickets}
-            className="px-6 py-3.5 text-center cursor-pointer bg-gold hover:bg-gold-hover text-obsidian font-mono text-xs font-bold uppercase tracking-widest rounded-xl transition-all shadow-lg shadow-gold/5 flex items-center justify-center gap-2 group"
+            className="px-6 py-3.5 text-center cursor-pointer bg-gold hover:bg-gold-hover text-obsidian font-mono text-base font-semibold min-h-[44px] font-bold uppercase tracking-widest rounded-xl transition-all shadow-lg shadow-gold/5 flex items-center justify-center gap-2 group"
           >
             <span>Secure Board Pass</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -67,14 +67,14 @@ export default function HeroSection({
 
           <button
             onClick={onScrollToMenu}
-            className="px-6 py-3.5 text-center cursor-pointer bg-[#161618] hover:bg-[#1E1E21] border border-white/10 hover:border-gold/30 text-stone-300 font-mono text-xs uppercase tracking-widest rounded-xl transition-all"
+            className="px-6 py-3.5 text-center cursor-pointer bg-[#161618] hover:bg-[#1E1E21] border border-white/10 hover:border-gold/30 text-stone-300 font-mono text-base font-semibold min-h-[44px] uppercase tracking-widest rounded-xl transition-all"
           >
             Inspect Current Provisions
           </button>
         </div>
 
         {/* Footer Meta indicators */}
-        <div className="flex items-center gap-6 pt-6 border-t border-white/5 font-mono text-[10px] text-stone-500">
+        <div className="flex items-center gap-6 pt-6 border-t border-white/5 font-mono text-xs font-semibold tracking-wider text-stone-500">
           <div className="flex items-center gap-1">
             <MapPin className="w-3.5 h-3.5 text-terracotta" />
             <span>South Los Angeles</span>
@@ -154,7 +154,7 @@ export default function HeroSection({
           {/* Additional decorative floating tag card overlay */}
           <div className="absolute top-[48%] -right-4 bg-charcoal border border-white/10 p-4 rounded-xl shadow-2xl hidden sm:flex items-center gap-3 z-30 max-w-[200px]" id="heritage-tag">
             <div className="w-2.5 h-2.5 bg-terracotta rounded-full flex-shrink-0 animate-ping" />
-            <div className="text-[10px] font-mono leading-tight">
+            <div className="text-xs font-semibold tracking-wider font-mono leading-tight">
               <span className="text-stone-400 block uppercase tracking-wider">Next Session Venue</span>
               <span className="text-white font-semibold">View Park Courtyard</span>
             </div>
